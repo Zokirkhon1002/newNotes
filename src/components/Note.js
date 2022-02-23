@@ -23,6 +23,7 @@ const Note = ({ note, deleteNote, handleIsLike }) => {
     txt.select()
     txt.setSelectionRange(0,99999)
     navigator.clipboard.writeText(txt);
+    alert("copied to Clipboard: "+txt)
 
 }
 
