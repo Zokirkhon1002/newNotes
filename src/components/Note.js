@@ -18,9 +18,16 @@ const Note = ({ note, deleteNote, handleIsLike }) => {
   const handleLike = () => {
     handleIsLike(!isLike, id);
   };
+  const handleCopy = () => {
+    let txt = text;
+    txt.select()
+    txt.setSelectionRange(0,99999)
+    navigator.clipboard.writeText(txt);
+
+}
 
   return (
-    <div title="Your note" className="note">
+    <div title="Your note" className="note" onDoubleClick={handleCopy}>
       <span className="text-with-heart">
         <span title={`your text is: "${text}"`}>{text}</span>
         <BsFillHeartFill
