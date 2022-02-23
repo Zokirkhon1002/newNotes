@@ -28,7 +28,7 @@ const Note = ({ note, deleteNote, handleIsLike }) => {
 }
 
   return (
-    <div title="Your note" className="note" onDoubleClick={handleCopy}>
+    <div title="Your note" className="note" onClick={handleCopy}>
       <span className="text-with-heart">
         <span title={`your text is: "${text}"`}>{text}</span>
         <BsFillHeartFill
