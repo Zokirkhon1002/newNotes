@@ -26,7 +26,7 @@ const Note = ({ note, deleteNote, handleIsLike }) => {
       className="note"
       onDoubleClick={() => {
         handleCopy();
-        alert("copied: " + text);
+        alert("copied to ClipBoard: " + text);
       }}
     >
       <span className="text-with-heart">
